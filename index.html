@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b0b12">
+<meta name="description" content="Ayra — an all-in-one Discord bot for moderation, security, automation, utilities, community features, games and limited AI.">
+<title>Ayra — Your Discord, Smarter.</title>
+<style>
+:root{
+  --bg:#08080d;--bg2:#0d0d15;--card:rgba(20,20,30,.72);--text:#f7f7fb;
+  --muted:#a6a6b5;--line:rgba(255,255,255,.09);--accent:#c4a7ff;
+  --accent2:#8b5cf6;--shadow:0 24px 80px rgba(0,0,0,.42)
+}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:
+radial-gradient(circle at 15% 10%,rgba(139,92,246,.18),transparent 30%),
+radial-gradient(circle at 85% 20%,rgba(196,167,255,.11),transparent 28%),
+linear-gradient(180deg,var(--bg),#0b0b11 55%,#08080d);
+color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.6}
+a{color:inherit;text-decoration:none}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}
+nav{height:76px;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:5}
+.brand-media{width:38px;height:38px;border-radius:12px;overflow:hidden;display:block}.brand-media img{width:100%;height:100%;object-fit:cover}.logo-fallback{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#eee3ff,#8b5cf6);display:none;place-items:center;color:#1a112b;font-weight:900}.brand{display:flex;align-items:center;gap:11px;font-weight:800;font-size:20px;letter-spacing:-.03em}
+.logo{width:38px;height:38px;border-radius:12px;background:linear-gradient(135deg,#eee3ff,#8b5cf6);display:grid;place-items:center;color:#1a112b;box-shadow:0 8px 30px rgba(139,92,246,.35);font-weight:900}
+.navlinks{display:flex;gap:25px;color:#bdbdc9;font-size:14px}.navlinks a:hover{color:white}
+.navcta{padding:10px 15px;border:1px solid var(--line);border-radius:11px;background:rgba(255,255,255,.04);font-size:14px}
+.hero{min-height:650px;display:grid;place-items:center;text-align:center;padding:80px 0 95px;position:relative;overflow:hidden}
+.hero-banner{width:min(920px,100%);height:210px;margin:0 auto 30px;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:linear-gradient(135deg,rgba(139,92,246,.16),rgba(255,255,255,.025));box-shadow:var(--shadow)}.hero-banner img{width:100%;height:100%;object-fit:cover}.banner-fallback{height:100%;align-items:center;justify-content:center;font-size:clamp(42px,8vw,80px);font-weight:900;letter-spacing:.12em;color:#c4a7ff;background:radial-gradient(circle at center,rgba(139,92,246,.25),transparent 60%)}.glow{position:absolute;width:420px;height:420px;border-radius:50%;background:#8b5cf6;filter:blur(150px);opacity:.15;z-index:-1}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:rgba(255,255,255,.035);padding:7px 12px;border-radius:999px;color:#cfcbd9;font-size:13px}
+.dot{width:7px;height:7px;border-radius:50%;background:#9f7aea;box-shadow:0 0 14px #9f7aea}
+h1{font-size:clamp(50px,8vw,92px);line-height:.95;letter-spacing:-.065em;margin:25px auto 22px;max-width:900px}
+.gradient{background:linear-gradient(90deg,#fff,#d9c8ff 45%,#a78bfa);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero p{max-width:680px;margin:0 auto;color:#aaa9b8;font-size:18px}
+.actions{display:flex;justify-content:center;gap:12px;margin-top:32px;flex-wrap:wrap}
+.btn{padding:13px 20px;border-radius:13px;font-weight:750;border:1px solid var(--line);transition:.2s}
+.btn:hover{transform:translateY(-2px)}
+.primary{background:#f3edff;color:#1b1229;box-shadow:0 12px 35px rgba(196,167,255,.18)}
+.secondary{background:rgba(255,255,255,.04);color:#fff}
+.section{padding:90px 0}.section-head{text-align:center;max-width:720px;margin:0 auto 42px}
+.kicker{color:#a78bfa;text-transform:uppercase;letter-spacing:.16em;font-size:11px;font-weight:800}
+h2{font-size:clamp(32px,5vw,52px);letter-spacing:-.05em;line-height:1.05;margin:10px 0 13px}
+.section-head p{color:var(--muted);margin:0}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.feature{padding:25px;border:1px solid var(--line);background:var(--card);border-radius:18px;box-shadow:var(--shadow);backdrop-filter:blur(15px)}
+.icon{width:42px;height:42px;border-radius:12px;background:rgba(167,139,250,.12);border:1px solid rgba(167,139,250,.2);display:grid;place-items:center;font-size:20px;margin-bottom:18px}
+.feature h3{margin:0 0 7px;font-size:18px}.feature p{color:#9e9eae;margin:0;font-size:14px}
+.band{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}
+.pills{display:flex;gap:10px;flex-wrap:wrap;justify-content:center}
+.pill{padding:8px 13px;border:1px solid var(--line);border-radius:999px;color:#bdbdcc;background:rgba(255,255,255,.025);font-size:13px}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:20px;align-items:stretch}
+.panel{border:1px solid var(--line);border-radius:20px;padding:30px;background:linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.018))}
+.panel ul{list-style:none;padding:0;margin:20px 0 0}.panel li{padding:10px 0;border-bottom:1px solid var(--line);color:#b2b2c0}.panel li:last-child{border:0}
+.check{color:#c4a7ff;margin-right:8px}
+.cta{text-align:center;padding:85px 20px;border:1px solid var(--line);border-radius:25px;background:radial-gradient(circle at 50% 0,rgba(139,92,246,.18),transparent 55%),rgba(255,255,255,.025)}
+.cta p{color:var(--muted);max-width:600px;margin:12px auto 25px}
+footer{border-top:1px solid var(--line);padding:28px 0 38px;color:#777786;font-size:13px;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+.footerlinks{display:flex;gap:18px}.footerlinks a:hover{color:white}
+@media(max-width:800px){.navlinks{display:none}.grid{grid-template-columns:1fr}.split{grid-template-columns:1fr}.hero{min-height:590px;padding-top:50px}h1{font-size:54px}.wrap{width:min(100% - 28px,1160px)}}
+</style>
+</head>
+<body>
+<header>
+<div class="wrap">
+<nav>
+<a class="brand" href="#"><span class="brand-media"><img src="assets/logo.png" alt="Ayra logo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="logo-fallback">A</span></span><span>Ayra</span></a>
+<div class="navlinks">
+<a href="#features">Features</a><a href="#security">Security</a><a href="#community">Community</a><a href="privacy.html">Privacy</a><a href="community.html">Community</a>
+</div>
+<a class="navcta" href="https://discord.com/oauth2/authorize?client_id=1534329278689317107&permissions=8&integration_type=0&scope=bot" target="_blank" rel="noopener">Add to Discord</a>
+</nav>
+</div>
+</header>
+
+<main>
+<section class="hero">
+<div class="glow"></div>
+<div class="wrap">
+<div class="hero-banner"><img src="assets/banner.png" alt="Ayra banner" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'"><div class="banner-fallback">AYRA</div></div>
+<div class="eyebrow"><span class="dot"></span> Built for modern Discord communities</div>
+<h1>One bot.<br><span class="gradient">Everything your server needs.</span></h1>
+<p>Ayra brings moderation, security, automation, community tools, games, utilities and limited AI together in one clean Discord experience.</p>
+<div class="actions">
+<a class="btn primary" href="https://discord.com/oauth2/authorize?client_id=1534329278689317107&permissions=8&integration_type=0&scope=bot" target="_blank" rel="noopener">✦ Add Ayra</a>
+<a class="btn secondary" href="#features">Explore features ↓</a><a class="btn secondary" href="https://discord.gg/9shecbzEup" target="_blank" rel="noopener">Support Server</a>
+</div>
+</div>
+</section>
+
+<div class="band"><div class="wrap"><div class="pills">
+<span class="pill">🛡️ Moderation</span><span class="pill">🔐 Anti-Nuke</span><span class="pill">⚙️ AutoMod</span><span class="pill">🎫 Tickets</span><span class="pill">💾 Backups</span><span class="pill">📈 Leveling</span><span class="pill">🎉 Giveaways</span><span class="pill">🤖 Limited AI</span><span class="pill">🎮 Games</span>
+</div></div></div>
+
+<section class="section" id="features">
+<div class="wrap">
+<div class="section-head"><div class="kicker">Everything in one place</div><h2>Powerful features, without the clutter.</h2><p>Ayra is designed to handle the everyday work of running a Discord community while keeping room for fun.</p></div>
+<div class="grid">
+<article class="feature"><div class="icon">🛡️</div><h3>Advanced Moderation</h3><p>Ban, kick, timeout, warn, lock, hide, role controls and other tools for day-to-day moderation.</p></article>
+<article class="feature"><div class="icon">🔐</div><h3>Anti-Nuke Security</h3><p>Protection against destructive actions such as mass channel, role, webhook and member changes.</p></article>
+<article class="feature"><div class="icon">⚙️</div><h3>Smart AutoMod</h3><p>Anti-spam, anti-link, anti-invite, anti-caps, emoji-spam and mass-mention protection.</p></article>
+<article class="feature"><div class="icon">🎫</div><h3>Tickets & Support</h3><p>Create organized support tickets with claims, ratings, logs and transcript support.</p></article>
+<article class="feature"><div class="icon">💾</div><h3>Server Backups</h3><p>Save important server configuration and restore supported channels, roles and settings when needed.</p></article>
+<article class="feature"><div class="icon">📈</div><h3>Community Growth</h3><p>Leveling, message tracking, invite tracking, giveaways, welcome tools and custom community features.</p></article>
+<article class="feature"><div class="icon">🤖</div><h3>Limited AI</h3><p>Useful AI-powered chat, questions, translation and personality features when enabled and available.</p></article>
+<article class="feature"><div class="icon">🎮</div><h3>Games & Fun</h3><p>Games, roleplay, media tools, fun commands and interactive features for your members.</p></article>
+<article class="feature"><div class="icon">🧰</div><h3>Utilities</h3><p>AFK, reminders, todos, custom roles, counting, notifications, server information and more.</p></article>
+</div>
+</div>
+</section>
+
+<section class="section" id="security">
+<div class="wrap">
+<div class="section-head"><div class="kicker">Protection first</div><h2>Built to help protect your community.</h2><p>Security tools work alongside moderation controls so staff can react faster to unwanted activity.</p></div>
+<div class="split">
+<div class="panel"><h3>Security layer</h3><ul>
+<li><span class="check">✓</span>Anti-ban & anti-kick protection</li>
+<li><span class="check">✓</span>Anti-channel & role destruction protection</li>
+<li><span class="check">✓</span>Webhook and integration protection</li>
+<li><span class="check">✓</span>Mass-mention and abuse protection</li>
+<li><span class="check">✓</span>Whitelist / blacklist controls</li>
+</ul></div>
+<div class="panel"><h3>Moderation layer</h3><ul>
+<li><span class="check">✓</span>Warnings and moderation actions</li>
+<li><span class="check">✓</span>Message management and channel controls</li>
+<li><span class="check">✓</span>Automated spam/link/invite filtering</li>
+<li><span class="check">✓</span>Server-specific configuration</li>
+<li><span class="check">✓</span>Logging and support workflows</li>
+</ul></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="community">
+<div class="wrap">
+<div class="cta">
+<div class="kicker">Ready when you are</div>
+<h2>Give your server a smarter toolkit.</h2>
+<p>Add Ayra to your Discord server and bring moderation, security, automation, community tools and fun under one roof.</p>
+<div class="actions">
+<a class="btn primary" href="https://discord.com/oauth2/authorize?client_id=1534329278689317107&permissions=8&integration_type=0&scope=bot" target="_blank" rel="noopener">Add Ayra to Discord</a>
+<a class="btn secondary" href="https://discord.gg/EBfpYsG9YE" target="_blank" rel="noopener">Join OVERFOLOW</a><a class="btn secondary" href="terms.html">Terms of Service</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer>
+<div class="wrap" style="width:100%;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap">
+<div>© 2026 Ayra · An independent third-party Discord application.</div>
+<div class="footerlinks"><a href="terms.html">Terms</a><a href="privacy.html">Privacy</a><a href="community.html">Community</a><a href="https://discord.gg/9shecbzEup" target="_blank" rel="noopener">Support</a><a href="https://discord.gg/EBfpYsG9YE" target="_blank" rel="noopener">OVERFOLOW</a><a href="mailto:discordlabbd@gmail.com">Contact</a></div>
+</div>
+</footer>
+</body>
+</html>

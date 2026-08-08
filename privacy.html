@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ayra — Privacy Policy</title>
+<style>
+:root{--bg:#0b1020;--card:#111827;--card2:#0f172a;--text:#e5e7eb;--muted:#9ca3af;--accent:#a78bfa;--border:#243047}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(135deg,#070b16,#111827 55%,#17122b);color:var(--text);font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;line-height:1.75}
+main{max-width:980px;margin:48px auto;padding:0 20px 60px}
+.card{background:rgba(17,24,39,.94);border:1px solid var(--border);border-radius:20px;padding:38px;box-shadow:0 18px 60px rgba(0,0,0,.28)}
+h1{font-size:38px;line-height:1.15;margin:0 0 8px;color:#fff}
+h2{margin-top:34px;color:#fff;font-size:23px}
+h3{margin-top:24px;color:#f3f4f6;font-size:18px}
+p,li{color:#d1d5db}
+.muted{color:var(--muted)}
+.badge{display:inline-block;padding:6px 12px;border:1px solid #3b315d;background:#1b1730;border-radius:999px;color:#c4b5fd;font-size:13px;margin:8px 0 20px}
+.box{padding:16px 18px;border-radius:14px;background:#0b1222;border:1px solid var(--border);margin:18px 0}
+a{color:#c4b5fd}
+code{background:#0b1222;border:1px solid var(--border);padding:2px 6px;border-radius:6px}
+table{width:100%;border-collapse:collapse;margin:18px 0}
+th,td{border:1px solid var(--border);padding:12px;text-align:left;vertical-align:top}
+th{background:#0b1222;color:#fff}
+.nav{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.nav a{text-decoration:none;padding:9px 13px;border:1px solid var(--border);border-radius:10px;background:#0b1222}
+.footer{margin-top:30px;padding-top:20px;border-top:1px solid var(--border);color:var(--muted);font-size:14px}
+</style>
+</head>
+<body><main>
+<div class="nav"><a href="index.html">Ayra Legal</a><a href="terms.html">Terms of Service</a><a href="privacy.html">Privacy Policy</a></div>
+<section class="card">
+<h1>Ayra — Privacy Policy</h1>
+<div class="badge">Effective August 8, 2026</div>
+<p class="muted">Operator: Anish · Privacy contact: <a href="mailto:discordlabbd@gmail.com">discordlabbd@gmail.com</a></p>
+
+<div class="box"><strong>Plain-language summary:</strong> Ayra processes Discord identifiers, server configuration, and message/content data when needed for features you or a server administrator use. Some features store information in local SQLite databases. AI requests may be sent to Groq, search requests may be sent to Google/SerpAPI, and other feature-specific requests may be sent to third-party APIs.</div>
+
+<h2>1. Scope</h2>
+<p>This Privacy Policy explains how the operator of Ayra (“we”, “us”, “our”) processes information when you interact with Ayra on Discord.</p>
+<p>Ayra is an independent third-party Discord application and is not operated, sponsored, endorsed, or affiliated with Discord Inc. Discord separately processes information under its own privacy policy.</p>
+
+<h2>2. Information We Process</h2>
+<table>
+<tr><th>Category</th><th>Examples</th><th>Why</th></tr>
+<tr><td>Discord identifiers</td><td>User ID, Guild/Server ID, Channel ID, Role ID, Message ID</td><td>Identify users and server context, operate commands, permissions and configuration.</td></tr>
+<tr><td>Discord profile/server information</td><td>Display name, username, avatar URL, guild/member information, roles and permissions</td><td>Display responses, verify permissions, moderate, create logs, tickets and server features.</td></tr>
+<tr><td>Message/content data</td><td>Messages, commands, search queries, ticket messages, counting expressions, AI prompts, autoresponder/sticky content</td><td>Provide the feature requested and, for selected features, store history or configuration.</td></tr>
+<tr><td>Moderation/security data</td><td>Warnings, blacklist/block records, automod settings, antinuke settings and whitelists</td><td>Prevent abuse and enforce server-configured rules.</td></tr>
+<tr><td>Activity statistics</td><td>Message counts, XP/levels, invite relationships and join/leave tracking</td><td>Provide leveling, tracking and community statistics.</td></tr>
+<tr><td>Ticket data</td><td>Ticket creator/claimer/closer IDs, reason, category, rating/feedback and ticket channel history</td><td>Operate support tickets, ratings, logs and transcripts.</td></tr>
+<tr><td>Server configuration</td><td>Channel/role IDs, settings, prefixes, automod rules, welcome settings, notification settings and similar configuration</td><td>Remember how Ayra should operate in each server.</td></tr>
+<tr><td>Backups</td><td>Server roles, channels, categories, topics, permissions/overwrites, emojis, server name and creator ID</td><td>Create and restore administrator-requested server backups.</td></tr>
+</table>
+
+<h2>3. How Message Content Is Used</h2>
+<p>Ayra may receive message content because several features operate on messages, including AI chatbot responses, automoderation, anti-spam and anti-link protections, autoresponders, counting, AFK notifications, message tracking, snipe/edit-snipe, and other utilities.</p>
+<p>Not every message is permanently stored. Some features process content transiently and only store configuration, counters, or limited history. Where content is stored, the relevant feature-specific retention described below applies.</p>
+
+<h2>4. AI Processing</h2>
+<p>Ayra’s AI features use Groq’s API. When you use AI chat, AI questions, translation, or another Groq-powered feature, the content necessary to generate the response may be transmitted to Groq. For chatbot conversations this can include your current message, recent conversation context, and applicable personality instructions.</p>
+<p>Groq currently states that inference customer data is not retained by default, except in limited circumstances such as system reliability or abuse monitoring, and that such reliability/abuse logs may be retained for up to 30 days. Groq also states that usage metadata is retained. These third-party practices are controlled by Groq and may change.</p>
+<p>See <a href="https://console.groq.com/docs/your-data">Groq's current data documentation</a> and <a href="https://groq.com/privacy-policy">Groq's Privacy Policy</a>.</p>
+
+<h2>5. Feature-Specific Storage and Retention</h2>
+<h3>AI conversation memory</h3>
+<p>The AI chatbot stores recent user/assistant conversation messages in <code>conversation_memory</code>. The current implementation automatically removes entries older than approximately 24 hours when the cleanup process runs for the relevant conversation.</p>
+
+<h3>AI chatbot history and personality</h3>
+<p>A separate <code>chatbot_history</code> table stores the user’s message, Ayra’s response, user ID, guild ID and timestamp. The current implementation does not automatically expire this table. It remains until the user clears their Ayra data, the server data is removed/reset, or a valid deletion request is processed.</p>
+<p>Saved personal AI personality preferences are stored in <code>user_personalities</code> until cleared or deleted.</p>
+
+<h3>AI data deletion command</h3>
+<p>The current <code>ai database-clear</code> command deletes the user’s conversation memory, chatbot history and personal personality for the current server. You can also request deletion by contacting <a href="mailto:discordlabbd@gmail.com">discordlabbd@gmail.com</a>.</p>
+
+<h3>Roleplay and temporary AI context</h3>
+<p>Roleplay history is maintained in application memory while the roleplay session is active. The current roleplay flow does not intentionally write that roleplay history to the AI database, although the content may still be transmitted to the AI provider when needed to generate responses.</p>
+
+<h3>Message tracking</h3>
+<p>If message tracking is enabled, Ayra stores per-user message counts and daily message counts by guild. It does not need to store the full message text for this feature. Invite tracking can store inviter ID, invited-user ID, invite code, join time and whether the invited member later left.</p>
+
+<h3>Leveling</h3>
+<p>When leveling is enabled, Ayra stores guild/user IDs and XP/level information and may use server-configured level roles and multipliers.</p>
+
+<h3>AFK</h3>
+<p>The AFK feature can store your user ID, AFK status, reason, timestamp, mention count, server association and notification preference. When another user mentions an AFK user, the bot may process the mentioning message and may send the message content to the AFK notification destination configured by the feature.</p>
+
+<h3>Tickets and transcripts</h3>
+<p>Ticket records can contain creator, claimer, closer, reason, category, urgency/priority, timestamps, ratings and feedback. When a transcript is requested or a ticket is closed, Ayra can read the ticket channel history and generate an HTML transcript containing message text, display names, timestamps and attachments. The generated transcript is sent through Discord; the current code does not intentionally save the generated HTML transcript in a local database.</p>
+
+<h3>Server backups</h3>
+<p>When an administrator creates a backup, Ayra stores the server name, creator ID and serialized server configuration, including roles, channels, categories, topics, permission overwrites and emoji URLs. Permission overwrites can contain role or member identifiers. Backups are user-created and may be deleted with the available backup deletion feature.</p>
+
+<h3>Todos, counting and other user content</h3>
+<p>Depending on the features used, Ayra can store todo tasks, counting expressions/results, autoresponder messages, sticky messages, custom-role configuration, giveaway/ticket configuration, warnings, blacklist/block records and other server-specific settings.</p>
+
+<h3>Snipe and edit-snipe</h3>
+<p>The snipe feature keeps a limited in-memory cache of recently deleted or edited messages, including author information, message content and attachment URLs. The current implementation limits the cache to approximately 10 entries per channel and does not intentionally persist this cache to the SQLite databases.</p>
+
+<h3>Command and interaction logging</h3>
+<p>The current bot code sends command-completion metadata to an operator-controlled Discord webhook when configured. This can include command name, guild name/ID, channel name/ID, user name/ID, avatar URL and timestamp. The webhook destination determines its own retention and access practices. The bot operator should restrict access to this webhook.</p>
+
+<h2>6. Third-Party Services</h2>
+<p>Depending on which commands are used and which API keys are configured, Ayra may send feature-related information to third-party services. Examples include:</p>
+<ul>
+<li><strong>Groq:</strong> AI chat, translation and related AI requests.</li>
+<li><strong>Google Custom Search / SerpAPI:</strong> search and image-search queries.</li>
+<li><strong>Giphy / Tenor and other media providers:</strong> GIF/media searches.</li>
+<li><strong>OpenWeather:</strong> weather queries such as the city requested.</li>
+<li><strong>Cryptocurrency providers:</strong> market, price, news or blockchain queries, which may include a cryptocurrency symbol, asset name, transaction hash or blockchain address entered for the feature.</li>
+<li><strong>Other public APIs:</strong> certain games, fun, quote, image, speech, anime/media and utility commands may contact their respective service providers.</li>
+</ul>
+<p>Third-party providers have their own privacy policies and terms. We do not control their independent processing or retention practices.</p>
+
+<h2>7. Data Sharing</h2>
+<p>We do not sell Ayra user data as a business model. Information may be shared or made available to:</p>
+<ul>
+<li>Discord, as necessary to operate a Discord application and send/receive Discord data;</li>
+<li>third-party API providers when a feature requires their service;</li>
+<li>the server administrators and moderators who configure or receive Ayra logs, tickets, transcripts, moderation results or tracking information;</li>
+<li>the operator’s infrastructure and service providers used to host and maintain Ayra;</li>
+<li>authorities or other parties where disclosure is required by law or reasonably necessary to protect users, the Service, or legal rights.</li>
+</ul>
+
+<h2>8. Data Retention</h2>
+<p>Retention depends on the feature. Some information is automatically short-lived, while configuration and history databases may remain until reset, deletion, or a valid request. Because Ayra is installed into independently managed Discord servers, some information may also remain in Discord or in a server administrator’s own logs, backups, transcripts, or screenshots after Ayra data is deleted.</p>
+
+<h2>9. Your Choices and Deletion Requests</h2>
+<p>You may stop using Ayra or ask a server administrator to remove Ayra from a server. For data stored in Ayra-controlled databases, you may request access or deletion by emailing <a href="mailto:discordlabbd@gmail.com">discordlabbd@gmail.com</a>.</p>
+<p>When appropriate, we may ask for your Discord User ID or other information needed to verify the request. We will delete applicable data from systems under our control within a reasonable period, subject to legitimate legal, security, backup, or operational exceptions.</p>
+<p>Deletion from Ayra does not automatically delete information already stored by Discord, third-party API providers, server administrators, or other independent services.</p>
+
+<h2>10. Security</h2>
+<p>We use reasonable measures intended to protect Ayra-controlled data. No online service, Discord bot, database, webhook, or network transmission can be guaranteed to be completely secure.</p>
+<p>Do not send passwords, Discord tokens, API keys, private keys, payment-card details, or other secrets to Ayra.</p>
+
+<h2>11. International Processing</h2>
+<p>Ayra and its third-party providers may process information outside your country. For example, Groq currently states that customer data retained by its services is stored in Google Cloud Platform infrastructure in the United States. International processing may therefore involve different privacy laws and safeguards.</p>
+
+<h2>12. Children and Age Requirements</h2>
+<p>Ayra is not intended to bypass Discord’s age requirements. We do not knowingly request personal information from children in violation of applicable law. If you believe information has been collected in circumstances where it should not have been, contact us at <a href="mailto:discordlabbd@gmail.com">discordlabbd@gmail.com</a>.</p>
+
+<h2>13. Changes to This Privacy Policy</h2>
+<p>We may update this Privacy Policy when Ayra’s features, data practices, third-party services, or legal requirements change. The latest version will be published at this URL and will display its effective date.</p>
+
+<h2>14. Contact</h2>
+<p><strong>Operator:</strong> Anish<br>
+<strong>Privacy / Support:</strong> <a href="mailto:discordlabbd@gmail.com">discordlabbd@gmail.com</a><br>
+<strong>Jurisdiction:</strong> Bangladesh</p>
+<p>For deletion or access requests, include your Discord User ID when reasonably necessary. Never include your password, Discord token, API keys, private keys, or other secrets.</p>
+
+<div class="footer">Ayra is an independent third-party Discord application and is not affiliated with Discord Inc.</div>
+</section>
+</main></body></html>
